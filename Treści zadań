@@ -288,3 +288,59 @@ BRAK
 
 Uwaga:
 Program powinien wykorzystywać samodzielną implementację drzew czerwono czarnych.
+
+======================================================= 7 =======================================================
+
+
+Janusz dowiedział się, że w firmie szykują się zmiany. 
+Opracowany niedawno system wybierania klientów, do których jeżdżą handlowcy,
+wymaga poprawek. Zarząd postanowił, że będą po prostu wysyłać pracowników do konkretnych miast.
+Co więcej, okazuje się, że nie zawsze wszystko da się załatwić podczas jednego spotkania.
+Oznacza to, że niektórych klientów trzeba będzie odwiedzić więcej niż raz. 
+W obrębie danego miasta zawsze wybierany jest klient o najwyższym priorytecie.
+Może jednak zdarzyć się sytuacja, gdzie więcej niż jeden klient ma taki sam priorytet. 
+Wówczas decyduje większa ilość pozostałych odwiedzeń, wymaganych do załatwienia sprawy. 
+Jeżeli zarówno priorytet jak i pozostała ilość odwiedzeń jest równa, wybierany jest ten klient, 
+który najdłużej oczekuje na swoją kolej. Czasami w podanym mieście nie ma oczekującego klienta. 
+Wtedy pracownik zostaje w biurze i zajmuje się innymi zadaniami. Zlecenie jest uważane za zrealizowane
+po odwiedzeniu klienta wymaganą ilość razy. Co ważne, pracownicy znacznie częściej wysyłani są do 
+dużych miast niż na prowincję. Mnogość warunków spowodowała u Janusza potworną migrenę. Pomóż pracownikom
+raz jeszcze i napisz program, który zautomatyzuje proces wyznaczania klientów.
+
+Wejście:
+W pierwszej linii program wczytuje liczbę naturalną N określającą ilość komend programu. 
+Następnie program wczytuje n komend działających w następujący sposób:
+
+* A m n p i – dodanie klienta n w mieście m z priorytetem p oraz wymaganą ilością odwiedzeń i
+
+* F m – wyszukanie klienta w mieście m. Jeżeli w tej samej odległości jest więcej niż jeden klient,
+wybierany jest ten o najwyższym priorytecie. Dla klientów o równym priorytecie decyduje większa ilość pozostałych odwiedzeń.
+
+Wyjście:
+Na wyjściu dla każdej operacji F program powinien zwrócić nazwę wybranego klienta. 
+Jeżeli w podanym mieście nie ma żadnego oczekującego klienta, wyświetlany jest komunikat „BRAK”.
+
+0 < N <= 500000
+
+Przykładowe wejście:
+10
+A Krakow klient1 3.6 2
+A Warszawa klient2 6 1
+A Lublin klient3 4 1
+F Krakow
+A Krakow klient4 2 3
+A Lublin klient5 4 1
+F Krakow
+F Poznan
+F Krakow
+F Lublin
+Przykładowe wyjście:
+klient1
+klient1
+BRAK
+klient4
+klient3
+Uwaga:
+Program powinien wykorzystywać samodzielną implementację drzew splay.
+
+======================================================= 8 =======================================================
