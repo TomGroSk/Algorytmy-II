@@ -234,3 +234,57 @@ NIE
 Test
 Ostatni
 
+======================================================= 6 =======================================================
+
+Janusz awansował w pracy. Obecnie otrzymał posadę handlowca. 
+Jego zadaniem jest utrzymywanie kontaktów z klientami i sprzedaż produktów.
+Janusz codziennie odwiedza jednego klienta. Rano otrzymuje od kierownika informację w jakiej
+nieprzekraczalnej odległości od firmy powinien szukać kolejnego zlecenia. Dzięki temu dyspozytor
+może optymalnie rozdzielać pracę handlowców w całym kraju. Dodatkowo każdy klient ma swój priorytet.
+Oznacza to, że Janusz powinien znaleźć klienta znajdującego się jak najdalej od firmy
+nie przekraczając maksymalnej odległości. Jeżeli w tej samej odległości znajduje się więcej 
+niż jeden klient to Janusz wybiera tego z najwyższym priorytetem. Jeżeli więcej niż jeden klient
+ma ten sam priorytet wybierany jest ten który czeka najdłużej. Czasami zdarza się tak, że w 
+zakładanej odległości nie ma żadnego oczekującego klienta. Wówczas Janusz zostaje w biurze. 
+Oczywiście zlecenia są jednorazowe. Manualne wyszukiwanie celu podróży zajmuje wszystkim pracownikom 
+sporo cennego czasu. Można to usprawnić pisząc prosty program. Pomóż handlowcom i napisz program który pomoże w wyborze zleceń.
+
+Wejście:
+W pierwszej linii program wczytuje liczbę naturalną N określającą ilość komend programu.
+Następnie program wczytuje n komend działających w następujący sposób:
+
+* A o n p – dodanie klienta n w odległości o od firmy z priorytetem p
+
+* F o – wyszukanie klienta w odległości nie większej niż o. 
+Jeżeli w tej samej odległości jest więcej niż jeden klient wybierany jest ten o najwyższym priorytecie.
+
+Wyjście:
+Na wyjściu dla każdej operacji F program powinien zwrócić nazwę wybranego klienta. 
+Jeżeli w zakładanej odległości nie ma żadnego oczekującego klienta wyświetlany jest komunikat „BRAK”.
+
+0 <= N <= 500000
+
+
+
+Przykładowe wejście:
+10
+A 4.3 klient1 5.1
+A 3.8 klient2 6
+A 5 klient3 2.5
+F 4.5
+A 3.8 klient4 6.5
+F 4
+A 9.1 klient5 2
+F 4
+F 9
+F 1
+
+Przykładowe wyjście:
+klient1
+klient4
+klient2
+klient3
+BRAK
+
+Uwaga:
+Program powinien wykorzystywać samodzielną implementację drzew czerwono czarnych.
