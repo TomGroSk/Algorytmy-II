@@ -507,4 +507,52 @@ A12rS13
 WYMAGANIA
 Program powinien wykorzystywać samodzielnie zaimplementowaną tablicę z hashowaniem.
 
+======================================================= 11 =======================================================
+
+Janusz dowiedział się z gazety, że lotnisko Chopina w Warszawie boryka się z nie lada problemem. 
+Olbrzymie natężenie ruchu powietrznego powoduje zamęt wśród kontrolerów lotu. 
+W zawiązku z tym zaczęto obawiać się kolizji samolotów. Człowiek nie zawsze jest w stanie zobaczyć,
+które maszyny na mapie znajdują się najbliżej siebie. Nasz bohater wkrótce leci na wakacje, 
+więc bardzo go zaniepokoiła ta wiadomość. Zaczął zastanawiać się nad oprogramowaniem, 
+które będzie wyszukiwało maszyny znajdujące się najbliżej siebie na mapie. 
+Jeżeli dwa samoloty znajdują się zbyt blisko uruchamiany jest alarm. 
+Co ważne raz znaleziona para jest wyłączana z kolejnych poszukiwań. Jeżeli w tej samej odległości znajduje
+się więcej niż jedna para, alarm jest wyświetlany w pierwszej kolejności dla tej, 
+która zawiera samolot o niższym numerze identyfikacyjnym. Jeżeli ten samolot ma więcej 
+dopasowań w tej samej odległości to również jako pierwszy rozpatrywany jest lot o niższym numerze.
+Pomóż Januszowi i napisz oprogramowanie wspomagające kontrolerów.
+
+Wejście:
+W pierwszej linii wejścia program otrzymuje liczbę naturalną N określającą liczbę samolotów
+na mapie oraz zmiennoprzecinkową L określającą odległość kolizyjną. Następnie w N liniach program
+otrzymuje trzy liczby naturalne I, X oraz Y, gdzie pierwsza z nich jest unikalnym numerem identyfikacyjnym lotu,
+natomiast pozostałe współrzędnymi na mapie.
+
+Wyjście:
+Na wyjściu program powinien wypisać pary numerów lotów których odległość między sobą nie przekracza odległości L,
+w kolejności od samolotów znajdujących się najbliżej siebie. Pierwszy numer w parze zawsze musi być mniejszy.
+
+0 < N <= 50000
+
+0 <= I <= 100000
+
+0 <= X <= 2000000000
+
+0 <= Y <= 2000000000
+
+
+Przykładowe wejście:
+
+6 2.5
+14 30 31
+202 3 3
+989 32 29
+101 2 3
+325 8 11
+497 7 13
+
+Przykładowe wyjście:
+
+101 202
+325 497
 
